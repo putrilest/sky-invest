@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin=""></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo-investasi.png" alt="logo">
+                <span>|</span>
+                <h3>SkyINVEST
+                    <p>Pusat Informasi Reksadana Investasi</p>
+                <h3>
+            </div>
+    
+            
+            <ul class="menu">
+                <li><a href=""  id="first">BERANDA</a></li>
+                <li><a href="../Reksadana/reksadana.html" target="_self">REKSADANA</a></li>
+                <li><a href="../Aplikasi/aplikasi.html">APLIKASI</a></li>
+                <li class="dropdown">
+                    <a id="bar">BERITA
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="content">
+                        <a href="../Berita/berita_lokal.html">LOKAL</a>
+                        <a href="../Berita/berita_internasional.html">INTERNASIONAL</a>
+                    </div>
+                </li>
+                <li><a href="../Profil/profil.html">PROFIL</a></li>
+            </ul>
+    
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <img src="main.jpg" alt="background"> -->
+        
+    <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="rekonmendasi-investasi-jangka-panjang.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="apa-itu-reksa-dana-blog-post.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="main.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="manajer-investasi-yang-tepat-blog-post.png" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+      </div>
+      <!--image slider end-->
+  
+      
+    </main>
+
+    <footer>
+        <p class="putih">2022 © SkyINVEST. All Rights Reserved. </p>
+        <p class="biru">Privacy Policy</p>
+        <p class="putih">|</p>
+        <p class="biru">Terms of Service</p>
+    </footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* ======================================  NAVBAR  ============================================== */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+}
+
+header{
+    top:0;
+    width: 100%;
+    position: fixed;
+}
+
+header:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding:10px 0;
+    color: black;
+    border-bottom:1px solid rgb(211, 200, 200);
+}
+
+nav>.logo{
+    display:flex;
+    align-items: center;
+}
+
+.logo > img {
+    width:10%;
+    
+}
+
+.logo > span{
+    font-size:50px;
+    color:black;
+    padding-right: 5px;
+}
+
+
+.logo>h3{
+    font-family: 'Source Code Pro', monospace;
+    color:rgb(7, 7, 116);
+    font-size: 30px;
+    text-shadow: 2px 3px 4px gray;;
+}
+
+h3>p{
+    font-family: 'Source Code Pro', monospace;
+    color:black;
+    font-size: 15px;
+    text-shadow: 2px 3px 4px gray;;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width:40%;
+}
+
+nav ul li #third{
+    color:white;
+    padding: 10px;
+    background-color: rgb(7, 7, 116);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a{
+    color:rgb(7, 7, 116);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Playfair Display SC',serif;
+    font-size: 12px;
+    padding:10px; 
+}
+
+nav ul li a:hover{
+    background-color: rgb(7, 7, 116);
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+    color:white;
+}
+.dropdown{
+    position:relative;
+    display:inline-flex;
+}
+
+#bar{
+    display: flex;
+    align-items: center;
+}
+
+
+.content{
+    display: none;
+    position: absolute;
+    background-color: rgb(211, 200, 200);
+    min-width: 150px;
+    font-size: 16px;
+    top:30px;
+    z-index: 1;
+    border-top: 1px solid black;
+}
+
+.dropdown:hover .content{
+    display:block;
+}
+
+.content a{
+    padding: 12px 10px;
+    border-bottom: 1px solid black;
+    display:block;
+    transition: all .3s !important;
+}
+
+.content a:hover{
+    color:white;
+    border-radius: 0px;
+}
+
+/* ======================================  HAMBURGER MENU  ============================================== */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}   
+
+.menu-toggle > input{
+    position: absolute;
+    width:20px;
+    height:20px;
+    opacity: 0;
+    cursor:pointer;
+    z-index: 2;
+}
+
+.menu-toggle > span{
+    display: block;
+    width:20px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+/* ======================================  HAMBURGER ANIMASI  ============================================== */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+
+/* ======================================  MAIN  ============================================== */
+
+main{
+    margin-top:145px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container{
+    max-width:80%;
+    overflow-x: auto;
+    max-height: 64vh;
+    background-color: white;
+}
+
+thead th{
+    top:0;
+    position:sticky;
+    background-color:rgb(7, 7, 116);
+    color:white;
+    height:40px;
+}
+
+table{
+    height:20px;
+    border-collapse: collapse;
+    padding:20px 20px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(225, 219, 219);
+}
+
+tr td{
+    padding: 3px 10px;
+}
+
+td a{
+    cursor: pointer;
+}
+
+
+
+/* ======================================  FOOTER  ============================================== */
+footer{
+    padding:20px 0px;
+    width:100%;
+    color: white;
+    background-color: rgb(100, 97, 97);
+    border-top: 1px solid rgb(211, 200, 200);
+    bottom: 0;
+    position: fixed;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3), -6px -6px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+footer > p{
+    font-size: small;
+    display:inline;
+}
+
+footer > .biru{
+    color: rgb(7, 7, 116);
+}
+
+footer >  .putih{
+    color:white;
+}
+
+
+/* ======================================  RESPONSIVE BREAKPOINT  ============================================== */
+
+/* UKURAN TABLET */
+@media screen and (max-width: 768px){
+    h3>p{
+        font-size: x-small;
+    }
+
+    nav>ul {
+        width:50%;
+    }
+
+    .logo > span{
+        font-size:30px;
+        color:black;
+        padding-right: 5px;
+    }
+    
+    .logo>h3 {
+        font-family: 'Source Code Pro', monospace;
+        color:rgb(7, 7, 116);
+        font-size:15px;
+    }
+
+    nav ul li a{
+        font-size:10px;
+        padding:10px; 
+    }
+
+    
+    nav ul li #third{
+        color:white;
+        padding: 5px;
+        background-color: rgb(7, 7, 116);
+        font-weight: bold;
+        border-radius: 5px;
+        cursor:pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer>p{
+        font-size: x-small;
+    }
+}
+
+
+/* UKURAN MOBILE */
+@media screen and (max-width: 576px){
+    h3>p{
+        font-size: xx-small;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav > ul {
+        position: absolute;
+        right: 0;
+        padding-top:35px;
+        height:11.5vh;
+        width:100%;
+        justify-content:space-evenly;
+        flex-direction: flex;
+        align-items: center;
+        background-color: rgb(118, 116, 116);
+        font-size: x-large;
+        z-index: -1;
+        transform:translateX(100%);
+        transition: all 1s;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+    }
+
+    .content a{
+        display:inline-flex;
+        padding:10px 5px;
+        border-left: 1px solid black;
+    }
+
+    .dropdown:hover .content{
+        display:inline-flex;
+    }
+
+    .container{
+        font-size: x-small;
+    }
+
+    footer > p{
+        font-size: xx-small;
+    }
+}
